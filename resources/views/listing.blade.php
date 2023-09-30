@@ -8,14 +8,14 @@
 @foreach($listings as $listing) --}}
 @extends('layout')
 
-@section('content')
-@include('partials._search')
 
+@include('partials._search')
+@section('content')
 <a href="/" class="inline-block text-black ml-4 mb-4">
 <i class="fa-solid fa-arrow-left">Back</i>
 </a>
 <div class="mx-4">
- <x-card class="p-10 bg-black">
+ <x-card class="p-10 bg-green">
   <div class="flex flex-col items-center justify-center text-center">
    <img class="w-48 mr-6 mb-6" src="{{asset('images/no-image.png')}}" alt="" />
    <h3 class="text-2xl mb-2">
