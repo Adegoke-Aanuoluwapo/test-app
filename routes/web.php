@@ -15,20 +15,9 @@ use App\Models\Listing;
 */
 
 // All listing
-Route::get('/', function () {
-   
-});
+Route::get('/', [ListingController::class, 'index']);
 
 
 // Single Listing
 
-Route::get('/listings/{listing}', function(Listing $listing) {
-    return view('Listing', [
-        'listing' => $listing
-    ]);
-
-   
-
-    
-});
- 
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
