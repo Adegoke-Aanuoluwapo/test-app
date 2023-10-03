@@ -9,8 +9,9 @@ use Illuminate\Http\Request;
 class ListingController extends Controller
 {
     //show all listing
-    public function index()
+    public function index(Request $request)
     {
+        dd($request);
         return view('listings.index', [
             'listings' => Listing::all()
         ]);
